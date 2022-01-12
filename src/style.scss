@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body{
+  font-family: 'Source Code Pro', monoline;
+  background: linear-gradient(45deg, #080808, #080808,#03000f,#03000f ,#090026, #0e0040);
+  background-repeat: no-repeat;
+  color: #f4f4f4;
+  font-size: 1rem;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  
+  ::-webkit-scrollbar {
+      width: 0.3em;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #52d02d;
+    border-radius:0.3em;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: #68f906;
+  }
+}
+
+
+#mainBody{
+  width: 450px;
+  color: white;
+}
+
+#editor{
+  overflow:hidden;
+  font-size: 1rem;
+  width: 450px;
+  height: 1.5em;
+  color:white;
+  resize: none;
+  background: transparent;
+  border:none;
+  border-top: 2px solid white;
+  outline:none;
+}
+
+#preview {
+  padding:2px;
+  padding-bottom:10px;
+  list-style-type:none;
+  text-align: left;
+  
+  code{
+    padding: 3px;
+    margin: 10px;
+    margin-right: 20px;
+    color:#080808;
+    display:block;
+    background: #f4f4f4;
+  }
+  a{
+    padding: 2px;
+    display:flex;
+    flex-direction:row;
+    color:#f4f4f4;
+    text-decoration: none;
+  }
+  a:hover{
+    color:#52d02d;
+  }
+  img{
+    width:300px;
+    object-fit: contain;
+    margin-left: 50px;
+    text-align: center;
+    border-radius: 10%;
+  }
+}
+
+.listAnswer{
+  list-style-type:none;
+  overflow: auto;
+  word-wrap: break-word;
+  width:440px;
+  text-align: right;
+  text-size: 1.0rem;
+  resize: none;
+}
+
+#toolbar{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  padding-top: 25px;
+  
+  :hover{
+    color:#52d02d;
+    cursor:pointer;
+  }
+}
+
+.previewMin{
+  overflow: auto;
+  word-wrap: break-word;
+  max-height:500px;
+  width:450px;
+  text-align: left;
+  text-size: 1.0rem;
+  resize: none;
+
+}
+
+.previewMax{
+  overflow: auto;
+  word-wrap: break-word;
+  max-height: 90vh;
+  width:450px;
+  text-align: left;
+  text-size: 1.0rem;
+  resize: none;
+}
+
+
+//animation-row
+.codingEffect{
+  animation-name: starter;
+  animation-duration: 4s;
+}
+@keyframes starter {
+  from{
+    max-height:0;
+  }
+  50%{
+    max-heignt: 50vh;
+  }
+  to{
+    max-height:100vh;
+  }
+}
+
+
+.extendToMax{
+  animation-name: extend;
+  animation-duration: 1s;
+}
+@keyframes extend{
+  from{
+    max-height: 500px
+  }
+  to{
+    max-height:90vh;
+  }
+}
+
+.extendToMin{
+  animation-name: extend2;
+  animation-duration: 1s;
+}
+@keyframes extend2{
+  from{
+    max-height: 90vh
+  }
+  to{
+    max-height:500px;
+  }
+}
+
+.myTypewriter {
+  white-space: nowrap;
+  overflow: hidden; 
+  animation: type 2.5s steps(25,end) 
+}
+
+@keyframes type{
+  from{width:0}
+  to{width:450px}
+}
+
+
+
+@media screen and (max-width: 480px) {
+   body{
+    ::-webkit-scrollbar {
+      width: 1.5px;
+    }
+    ::-webkit-scrollbar-thumb{
+    border-radius:1.5px;
+    }
+  }
+  #mainBody{
+    width:300px;
+    max-width:90vw;
+  }
+  #editor{width:300px;}
+ 
+  #preview {
+  padding:1px;
+  padding-bottom:4px;
+  
+  code{
+    padding: 1px;
+    margin: 4px;
+    margin-right: 10px;
+  }
+  a{
+    padding: 1px;
+  }
+
+  img{
+    width:150px;
+    margin-left: 25px;
+  }
+}
+
+.listAnswer{
+  width:290px;
+}
+
+#toolbar{
+  padding-top: 10px;
+}
+
+.previewMin{
+
+  max-height:350px;
+  width:300px;
+}
+
+.previewMax{
+  width:300px;
+}
+
+
+@keyframes extend{
+  from{
+    max-height: 350px
+  }
+}
+
+@keyframes extend2{
+  to{
+    max-height:350px;
+  }
+}
+@keyframes type{
+  to{width:300px}
+}
+}
