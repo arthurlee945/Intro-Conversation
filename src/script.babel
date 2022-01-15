@@ -16,7 +16,7 @@ class App extends React.Component{
       extendPreview: true,
       text: "Ask me anything!",
       response: "Hmmm, I don't know how to answer that :|",
-      secondResponse: "Maybe you should ask another questions?",
+      secondResponse: "Maybe you should ask another question?",
       finalRespose: "How about you shoot me an email???",
       extendAni: true
     };
