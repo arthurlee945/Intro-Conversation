@@ -1,5 +1,5 @@
 # Conversation Editor
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/arthur-lee945/pen/jOGvZZr](https://codepen.io/arthur-lee945/pen/jOGvZZr).
+A Pen created on CodePen.io by <a href="https://codepen.io/arthur-lee945/pen/jOGvZZr">Arthur Lee</a>.
 
 
